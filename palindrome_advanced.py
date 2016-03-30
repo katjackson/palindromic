@@ -2,8 +2,9 @@ import re
 
 def reverse_string(text):
     backwards_text = ''
-    while len(backwards_text) < len(text):
-        backwards_text += text[::-1]
+    text = list(text)
+    while text != []:
+        backwards_text += text.pop()
     return backwards_text
 
 def strip_text(text):
@@ -16,7 +17,7 @@ def is_palindrome(text):
 
     backwards_text = reverse_string(stripped_text)
 
-    if backwards_text = stripped_text:
+    if backwards_text == stripped_text:
         return True
     else:
         return False
